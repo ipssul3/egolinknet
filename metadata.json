@@ -1,0 +1,6 @@
+{
+  "name": "Y2K Avatar Database",
+  "description": "An interactive digital-space game UI style Y2K catalog for avatars and their multi-dimensional personas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
