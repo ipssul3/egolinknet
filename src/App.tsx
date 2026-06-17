@@ -40,6 +40,7 @@ export default function App() {
                 cachedChar.imageUrl.includes('sketch_character') ||
                 cachedChar.imageUrl.includes('collage_character') ||
                 cachedChar.imageUrl.includes('pink_cat_mascot') ||
+                cachedChar.imageUrl.startsWith('/src/') || // Migrate legacy /src/ paths to local public folder paths
                 cachedChar.id === '1' || // Force synchronize core ME image
                 cachedChar.id === '4'    // Force synchronize core AI Interpretation image
               ) {

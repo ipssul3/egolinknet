@@ -82,13 +82,13 @@ export default function AvatarProfileTerminal({
 
   // Pre-configured avatar images fallback preset catalog (Local safe copies)
   const presetCatalog = [
-    { label: 'ME', url: '/src/assets/images/regenerated_image_1781448598653.png' },
-    { label: 'Poly-S01', url: '/src/assets/images/regenerated_image_1781448600947.png' },
-    { label: 'Pixie-Bit', url: '/src/assets/images/regenerated_image_1781448603101.png' },
-    { label: 'A.I.-SINK', url: '/src/assets/images/regenerated_image_1781448612105.png' },
-    { label: 'Draft-Out', url: '/src/assets/images/regenerated_image_1781448615290.png' },
-    { label: 'mix of tastes', url: '/src/assets/images/regenerated_image_1781448609557.png' },
-    { label: 'Pinko-Waving', url: '/src/assets/images/regenerated_image_1781448607718.png' },
+    { label: 'ME', url: 'assets/images/regenerated_image_1781448598653.png' },
+    { label: 'Poly-S01', url: 'assets/images/regenerated_image_1781448600947.png' },
+    { label: 'Pixie-Bit', url: 'assets/images/regenerated_image_1781448603101.png' },
+    { label: 'A.I.-SINK', url: 'assets/images/regenerated_image_1781448612105.png' },
+    { label: 'Draft-Out', url: 'assets/images/regenerated_image_1781448615290.png' },
+    { label: 'mix of tastes', url: 'assets/images/regenerated_image_1781448609557.png' },
+    { label: 'Pinko-Waving', url: 'assets/images/regenerated_image_1781448607718.png' },
   ];
 
   // Handler for text input edits (instant updates)
