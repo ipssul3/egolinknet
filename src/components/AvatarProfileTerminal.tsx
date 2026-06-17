@@ -80,15 +80,15 @@ export default function AvatarProfileTerminal({
     );
   }
 
-  // Pre-configured avatar images fallback preset catalog (Attached Discord URLs)
+  // Pre-configured avatar images fallback preset catalog (Local safe copies)
   const presetCatalog = [
-    { label: 'ME', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515744514092957847/-_2026_6_14_17.47.34_3.png?ex=6a301e95&is=6a2ecd15&hm=bfed44fd8575d55f4f1097a93df439b782b436976d5461bc8872eed7321fefb8&' },
-    { label: 'Poly-S01', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745061470736565/-_2026_6_14_16.30.23.png?ex=6a301f17&is=6a2ecd97&hm=802bb6ecaa219aa51a402b32f6aa31b5f359647d79ec6d164b149d1cc48c3305&' },
-    { label: 'Pixie-Bit', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745060598190210/1.png?ex=6a301f17&is=6a2ecd97&hm=69afed1990de10688e5e66992128a8fc79f16e66527d0d4592fd1681358caa56&' },
-    { label: 'A.I.-SINK', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745060225028146/7baf97ac-cb5d-402a-84f7-2b5380a14c3d.png?ex=6a301f17&is=6a2ecd97&hm=d50f5c83ebfc72a2540ed15c18b29251ad3ed18f52907d0e1ace067f3a63e579&' },
-    { label: 'Draft-Out', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745062389289172/-_2026_6_14_17.47.34_2.png?ex=6a301f18&is=6a2ecd98&hm=2a04dfa54dcbf6a1499bd1eb25b0fb3b4d16ab2dd8e8916e722d19c36e62366c&' },
-    { label: 'mix of tastes', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745062858915860/-_2026_6_14_17.47.34.png?ex=6a301f18&is=6a2ecd98&hm=a8b557ac017ab41220a1c7a2491b2edf45f228c2b4dd637b209e5aea8d0c379a&' },
-    { label: 'Pinko-Waving', url: 'https://cdn.discordapp.com/attachments/1324728082166190130/1515745061994762293/-_2026_6_14_17.47.34_1.png?ex=6a301f17&is=6a2ecd97&hm=2186d2c02b84c4beff031d8c39b473af8471a3e3e0587310477ed97c6847e752&' },
+    { label: 'ME', url: '/src/assets/images/regenerated_image_1781448598653.png' },
+    { label: 'Poly-S01', url: '/src/assets/images/regenerated_image_1781448600947.png' },
+    { label: 'Pixie-Bit', url: '/src/assets/images/regenerated_image_1781448603101.png' },
+    { label: 'A.I.-SINK', url: '/src/assets/images/regenerated_image_1781448612105.png' },
+    { label: 'Draft-Out', url: '/src/assets/images/regenerated_image_1781448615290.png' },
+    { label: 'mix of tastes', url: '/src/assets/images/regenerated_image_1781448609557.png' },
+    { label: 'Pinko-Waving', url: '/src/assets/images/regenerated_image_1781448607718.png' },
   ];
 
   // Handler for text input edits (instant updates)

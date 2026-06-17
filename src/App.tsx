@@ -21,24 +21,37 @@ export default function App() {
       try {
         const parsed = JSON.parse(cached);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          // Robust migration to replace old generated/input_file images with newly uploaded Discord images
+          // Robust migration to replace old generated/expired/Discord images with newly generated local assets
           const migrated = parsed.map((cachedChar: Avatar) => {
             const defaultMatch = DEFAULT_AVATARS.find((d) => d.id === cachedChar.id);
             if (defaultMatch) {
               const updated = { ...cachedChar };
+              // Force migration if the cached image is empty, includes expired discord link, or generated/temporary indicators
               if (
                 !cachedChar.imageUrl ||
-                cachedChar.imageUrl.includes('regenerated_image') ||
+                cachedChar.imageUrl.includes('cdn.discordapp.com') ||
                 cachedChar.imageUrl.includes('input_file') ||
-                cachedChar.id === '7' ||
-                cachedChar.id === '2'
+                cachedChar.imageUrl.includes('mascot_pink_cat') ||
+                cachedChar.imageUrl.startsWith('http') || // Update any remaining old external links
+                cachedChar.imageUrl.includes('main_character') || // Migrate recently generated placeholders back to original
+                cachedChar.imageUrl.includes('lowpoly_brown_hair') ||
+                cachedChar.imageUrl.includes('pixel_character') ||
+                cachedChar.imageUrl.includes('ai_character') ||
+                cachedChar.imageUrl.includes('sketch_character') ||
+                cachedChar.imageUrl.includes('collage_character') ||
+                cachedChar.imageUrl.includes('pink_cat_mascot') ||
+                cachedChar.id === '1' || // Force synchronize core ME image
+                cachedChar.id === '4'    // Force synchronize core AI Interpretation image
               ) {
                 updated.imageUrl = defaultMatch.imageUrl;
               }
               // Sync updated default descriptions to match preset changes
               updated.description = defaultMatch.description;
-              // Keep default names in sync (English only)
+              // Keep default names in sync
               updated.name = defaultMatch.name;
+              // Sync updated creation dates & accumulated play times to reflect user adjustments instantly
+              updated.createdDate = defaultMatch.createdDate;
+              updated.playTime = defaultMatch.playTime;
               return updated;
             }
             return cachedChar;
